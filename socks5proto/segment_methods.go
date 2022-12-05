@@ -132,7 +132,7 @@ func (sock_resp *SocksResp) Recv(sock net.Conn) error {
 	}
 	sock_resp.VER = read_bytes[0]
 	sock_resp.REP = read_bytes[1]
-	sock_resp.REP = read_bytes[2]
+	sock_resp.RSV = read_bytes[2]
 	sock_resp.ATYP = read_bytes[3]
 	switch sock_resp.ATYP {
 	case 0x01:
